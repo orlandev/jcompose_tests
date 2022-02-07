@@ -15,7 +15,6 @@ import com.orlandev.jcompose_tests.components.ModalBottomSheetSample
 import com.orlandev.jcompose_tests.components.NavigationRailSample
 import com.orlandev.jcompose_tests.components.SwipeToDismissListItems
 import com.orlandev.jcompose_tests.components.TextComponents
-import com.orlandev.jcompose_tests.utils.listComponentsName
 
 @Composable
 fun ComposablesDetailsScreen(navController: NavHostController, component: JComponents?) {
@@ -55,7 +54,7 @@ fun ShowComponent(componentId: JComponents) {
             NavigationRailSample()
         }
         JComponents.SwipeToDismiss -> {
-            SwipeToDismissListItems(listComponentsName.map { it.componentName })
+            SwipeToDismissListItems(JComponents.toList().map { it.componentName })
         }
         JComponents.TextComponents -> {
             TextComponents()

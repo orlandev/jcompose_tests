@@ -11,8 +11,8 @@ import androidx.compose.material.icons.filled.KeyboardArrowRight
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
+import com.orlandev.jcompose_tests.JComponents
 import com.orlandev.jcompose_tests.navigation.NavigationRoute
-import com.orlandev.jcompose_tests.utils.listComponentsName
 
 
 @OptIn(ExperimentalMaterialApi::class)
@@ -26,7 +26,7 @@ fun HomeScreen(navController: NavHostController) {
         )
     }) {
         LazyColumn(modifier = Modifier.fillMaxSize()) {
-            items(listComponentsName.map { it.componentName }) { currentName ->
+            items(JComponents.toList().map { it.componentName }) { currentName ->
                 ListItem(
                     modifier = Modifier.clickable {
                         navController.navigate(NavigationRoute.ComposablesDetailsScreen.route + "/$currentName")

@@ -4,10 +4,10 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.orlandev.jcompose_tests.JComponents
 import com.orlandev.jcompose_tests.extensions.toJCompnents
 import com.orlandev.jcompose_tests.ui.screens.ComposablesDetailsScreen
 import com.orlandev.jcompose_tests.ui.screens.HomeScreen
-import com.orlandev.jcompose_tests.utils.listComponentsName
 
 const val COMPONENT_NAME = "componentName"
 
@@ -29,7 +29,7 @@ fun NavigationGraph() {
             ComposablesDetailsScreen(
                 navController = navController, navControlleArgs.arguments?.getString(
                     COMPONENT_NAME
-                )?.toJCompnents(listJComponents = listComponentsName)
+                )?.toJCompnents(listJComponents = JComponents.toList())
             )
         }
     }
