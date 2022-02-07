@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.orlandev.jcompose_tests.components.ModalBottomSheetSample
+import com.orlandev.jcompose_tests.components.SwipeToDismissListItems
 import com.orlandev.jcompose_tests.ui.theme.Jcompose_testsTheme
 import kotlinx.coroutines.launch
 
@@ -28,7 +29,25 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    ModalBottomSheetSample()
+                    //ModalBottomSheetSample()
+
+                    val items = listOf(
+                        "Cupcake",
+                        "Donut",
+                        "Eclair",
+                        "Froyo",
+                        "Gingerbread",
+                        "Honeycomb",
+                        "Ice cream sandwich",
+                        "Jelly bean",
+                        "KitKat",
+                        "Lollipop",
+                        "Marshmallow",
+                        "Nougat",
+                        "Oreo",
+                        "Pie"
+                    )
+                    SwipeToDismissListItems(items = items)
                 }
             }
         }
