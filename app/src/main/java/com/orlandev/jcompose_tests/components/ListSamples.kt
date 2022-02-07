@@ -1,15 +1,70 @@
+/*
+ * Copyright 2019 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.orlandev.jcompose_tests.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.selection.toggleable
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
+@Composable
+@OptIn(ExperimentalMaterialApi::class)
+fun ClickableListItems() {
+    Column {
+        var switched by remember { mutableStateOf(false) }
+        val onSwitchedChange: (Boolean) -> Unit = { switched = it }
+        ListItem(
+            text = { Text("Switch ListItem") },
+            trailing = {
+                Switch(
+                    checked = switched,
+                    onCheckedChange = null // null recommended for accessibility with screenreaders
+                )
+            },
+            modifier = Modifier.toggleable(
+                value = switched,
+                onValueChange = onSwitchedChange
+            )
+        )
+        Divider()
+        var checked by remember { mutableStateOf(true) }
+        val onCheckedChange: (Boolean) -> Unit = { checked = it }
+        ListItem(
+            text = { Text("Checkbox ListItem") },
+            trailing = {
+                Checkbox(
+                    checked = checked,
+                    onCheckedChange = null // null recommended for accessibility with screenreaders
+                )
+            },
+            modifier = Modifier.toggleable(
+                value = checked,
+                onValueChange = onCheckedChange
+            )
+        )
+        Divider()
+    }
+}
 
 @Composable
 @OptIn(ExperimentalMaterialApi::class)
@@ -91,7 +146,6 @@ fun OneLineListItems() {
     }
 }
 
-
 @Composable
 @OptIn(ExperimentalMaterialApi::class)
 fun TwoLineListItems() {
@@ -154,7 +208,7 @@ fun ThreeLineListItems() {
             secondaryText = {
                 Text(
                     "This is a long secondary text for the current list item, " +
-                            "displayed on two lines"
+                        "displayed on two lines"
                 )
             },
             singleLineSecondaryText = false,
@@ -172,7 +226,7 @@ fun ThreeLineListItems() {
             secondaryText = {
                 Text(
                     "This is a long secondary text for the current list item " +
-                            "displayed on two lines"
+                        "displayed on two lines"
                 )
             },
             singleLineSecondaryText = false,
@@ -189,7 +243,7 @@ fun ThreeLineListItems() {
             secondaryText = {
                 Text(
                     "This is a long secondary text for the current list" +
-                            " item, displayed on two lines"
+                        " item, displayed on two lines"
                 )
             },
             singleLineSecondaryText = false,
@@ -212,6 +266,7 @@ fun ThreeLineListItems() {
 }
 
 // Demos for mixing RTL and LTR ListItems:
+
 @Composable
 @OptIn(ExperimentalMaterialApi::class)
 fun OneLineRtlLtrListItems() {
@@ -316,7 +371,7 @@ fun ThreeLineRtlLtrListItems() {
             secondaryText = {
                 Text(
                     "هذا نص ثانوي طويل لعنصر القائمة الحالي ، معروض على سطرين. " +
-                            "في لغات أخرى قد نحتاج إلى المزيد من النص"
+                        "في لغات أخرى قد نحتاج إلى المزيد من النص"
                 )
             },
             singleLineSecondaryText = false
