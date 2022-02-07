@@ -1,5 +1,6 @@
 package com.orlandev.jcompose_tests.ui.screens
 
+import OneLineListItems
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -11,10 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import com.orlandev.jcompose_tests.JComponents
-import com.orlandev.jcompose_tests.components.ModalBottomSheetSample
-import com.orlandev.jcompose_tests.components.NavigationRailSample
-import com.orlandev.jcompose_tests.components.SwipeToDismissListItems
-import com.orlandev.jcompose_tests.components.TextComponents
+import com.orlandev.jcompose_tests.components.*
 
 @Composable
 fun ComposablesDetailsScreen(navController: NavHostController, component: JComponents?) {
@@ -58,6 +56,15 @@ fun ShowComponent(componentId: JComponents) {
         }
         JComponents.TextComponents -> {
             TextComponents()
+        }
+        JComponents.ClickableListItems -> {
+            ClickableListItems()
+        }
+        JComponents.OneLineListItems -> {
+            OneLineListItems()
+        }
+        JComponents.TwoLineListItems -> {
+            TwoLineListItems()
         }
     }
 
