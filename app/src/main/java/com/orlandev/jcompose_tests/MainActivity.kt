@@ -8,6 +8,7 @@ import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
+import com.google.accompanist.insets.ProvideWindowInsets
 import com.orlandev.jcompose_tests.navigation.NavigationGraph
 import com.orlandev.jcompose_tests.ui.theme.Jcompose_testsTheme
 
@@ -40,7 +41,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    NavigationGraph()
+                    ProvideWindowInsets {
+                        NavigationGraph()
+                    }
                 }
             }
         }

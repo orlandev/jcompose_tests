@@ -8,6 +8,10 @@ sealed class JComponents(val componentName: String) {
     object ClickableListItems : JComponents(componentName = "ClickableListItems")
     object OneLineListItems : JComponents(componentName = "OneLineListItems")
     object TwoLineListItems : JComponents(componentName = "TwoLineListItems")
+    object ThreeLineListItems : JComponents(componentName = "ThreeLineListItems")
+    object OneLineRtlLtrListItems : JComponents(componentName = "OneLineRtlLtrListItems")
+    object TwoLineRtlLtrListItems : JComponents(componentName = "TwoLineRtlLtrListItems")
+    object ThreeLineRtlLtrListItems : JComponents(componentName = "ThreeLineRtlLtrListItems")
 
     companion object {
         fun toList() = listOf(
@@ -18,6 +22,10 @@ sealed class JComponents(val componentName: String) {
             JComponents.ClickableListItems,
             JComponents.OneLineListItems,
             JComponents.TwoLineListItems,
+            JComponents.ThreeLineListItems,
+            JComponents.OneLineRtlLtrListItems,
+            JComponents.TwoLineRtlLtrListItems,
+            JComponents.ThreeLineRtlLtrListItems,
         )
     }
 }

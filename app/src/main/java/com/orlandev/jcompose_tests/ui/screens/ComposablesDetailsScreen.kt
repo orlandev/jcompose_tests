@@ -1,6 +1,5 @@
 package com.orlandev.jcompose_tests.ui.screens
 
-import OneLineListItems
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -65,6 +64,18 @@ fun ShowComponent(componentId: JComponents) {
         }
         JComponents.TwoLineListItems -> {
             TwoLineListItems()
+        }
+        JComponents.ThreeLineListItems -> {
+            ThreeLineListItems()
+        }
+        JComponents.OneLineRtlLtrListItems -> {
+            OneLineRtlLtrListItems()
+        }
+        JComponents.ThreeLineRtlLtrListItems -> {
+            ThreeLineRtlLtrListItems()
+        }
+        JComponents.TwoLineRtlLtrListItems -> {
+            TwoLineRtlLtrListItems()
         }
     }
 
