@@ -50,7 +50,7 @@ class MainActivity : ComponentActivity() {
                     //TODO(  ADD NAVIGATION BETWEEN SCREEN TO SHOW COMPONENTS)
                     //ModalBottomSheetSample()
                    // SwipeToDismissListItems(items = items)
-                    LazyColumn{
+                  /*  LazyColumn{
                         item {
 
                             NavigationRailSample()
@@ -64,7 +64,10 @@ class MainActivity : ComponentActivity() {
                         item {
                             CompactNavigationRailSample()
                         }
-                    }
+                    }*/
+
+                    TextArea()
+
                 }
             }
         }
