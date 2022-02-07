@@ -9,7 +9,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.orlandev.jcompose_tests.ui.theme.Jcompose_testsTheme
 import kotlinx.coroutines.launch
 
 @Composable
@@ -48,4 +50,14 @@ fun ModalBottomSheetSample() {
             }
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun ModalBottomSheetPreview() {
+
+    Jcompose_testsTheme {
+        ModalBottomSheetSample()
+    }
+
 }

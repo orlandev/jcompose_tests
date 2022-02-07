@@ -38,6 +38,7 @@ class MainActivity : ComponentActivity() {
         "Pie"
     )
 
+    @OptIn(ExperimentalMaterialApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -49,24 +50,40 @@ class MainActivity : ComponentActivity() {
                 ) {
                     //TODO(  ADD NAVIGATION BETWEEN SCREEN TO SHOW COMPONENTS)
                     //ModalBottomSheetSample()
-                   // SwipeToDismissListItems(items = items)
-                  /*  LazyColumn{
-                        item {
+                    //SwipeToDismissListItems(items = items)
+                    /* LazyColumn{
+                         item {
 
-                            NavigationRailSample()
-                        }
-                        item {
-                            NavigationRailWithOnlySelectedLabelsSample()
-                        }
-                        item {
-                            NavigationRailBottomAlignSample()
-                        }
-                        item {
-                            CompactNavigationRailSample()
-                        }
-                    }*/
+                             NavigationRailSample()
+                         }
+                         item {
+                             NavigationRailWithOnlySelectedLabelsSample()
+                         }
+                         item {
+                             NavigationRailBottomAlignSample()
+                         }
+                         item {
+                             CompactNavigationRailSample()
+                         }
+                     }*/
+                    // TextArea()
 
-                    TextArea()
+                    LazyColumn() {
+                        items(100) {
+                            ListItem(
+                                icon = { Icon(Icons.Default.Favorite, contentDescription = null) },
+                                secondaryText = { Text(text = "Secondary Text") },
+                                overlineText = { Text(text = "Overline Text") },
+                                trailing = {
+                                    Button(onClick = { /*TODO*/ }) {
+                                        Text(text = "Trailing")
+                                    }
+                                },
+                                text = { Text(text = "Text") }
+
+                            )
+                        }
+                    }
 
                 }
             }
