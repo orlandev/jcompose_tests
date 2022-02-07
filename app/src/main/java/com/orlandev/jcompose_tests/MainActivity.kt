@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.orlandev.jcompose_tests.components.*
+import com.orlandev.jcompose_tests.navigation.NavigationGraph
 import com.orlandev.jcompose_tests.ui.theme.Jcompose_testsTheme
 import kotlinx.coroutines.launch
 
@@ -49,6 +50,9 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     //TODO(  ADD NAVIGATION BETWEEN SCREEN TO SHOW COMPONENTS)
+
+                    NavigationGraph()
+
                     //ModalBottomSheetSample()
                     //SwipeToDismissListItems(items = items)
                     /* LazyColumn{
@@ -68,14 +72,14 @@ class MainActivity : ComponentActivity() {
                      }*/
                     // TextArea()
 
-                    LazyColumn() {
-                        items(100) {
-                            ListItem(
-                                icon = { Icon(Icons.Default.Favorite, contentDescription = null) },
-                                secondaryText = { Text(text = "Secondary Text") },
-                                overlineText = { Text(text = "Overline Text") },
-                                trailing = {
-                                    Button(onClick = { /*TODO*/ }) {
+                    /*           LazyColumn() {
+                                   items(100) {
+                                       ListItem(
+                                           icon = { Icon(Icons.Default.Favorite, contentDescription = null) },
+                                           secondaryText = { Text(text = "Secondary Text") },
+                                           overlineText = { Text(text = "Overline Text") },
+                                           trailing = {
+                                               Button(onClick = { *//*TODO*//* }) {
                                         Text(text = "Trailing")
                                     }
                                 },
@@ -83,8 +87,8 @@ class MainActivity : ComponentActivity() {
 
                             )
                         }
-                    }
-
+                      }
+*/
                 }
             }
         }
