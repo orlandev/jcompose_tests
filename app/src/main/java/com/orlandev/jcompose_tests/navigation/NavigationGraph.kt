@@ -20,9 +20,7 @@ fun NavigationGraph() {
     ) {
 
         composable(NavigationRoute.HomeScreen.route) {
-
             HomeScreen(navController)
-
         }
 
         composable(NavigationRoute.ComposablesDetailsScreen.route + "/{$COMPONENT_NAME}") { navControlleArgs ->

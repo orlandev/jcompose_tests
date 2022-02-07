@@ -84,6 +84,13 @@ fun ShowComponent(componentId: JComponents) {
         JComponents.CustomAlertDialogSample -> {
             CustomAlertDialogSample()
         }
+        JComponents.SimpleBottomAppBar -> {
+            SimpleBottomAppBar()
+        }
+
+        JComponents.SimpleTopAppBar -> {
+            SimpleTopAppBar()
+        }
     }
 
 }
