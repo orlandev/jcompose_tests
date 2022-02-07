@@ -12,6 +12,8 @@ sealed class JComponents(val componentName: String) {
     object OneLineRtlLtrListItems : JComponents(componentName = "OneLineRtlLtrListItems")
     object TwoLineRtlLtrListItems : JComponents(componentName = "TwoLineRtlLtrListItems")
     object ThreeLineRtlLtrListItems : JComponents(componentName = "ThreeLineRtlLtrListItems")
+    object AlertDialogSample : JComponents(componentName = "AlertDialogSample")
+    object CustomAlertDialogSample : JComponents(componentName = "CustomAlertDialogSample")
 
     companion object {
         fun toList() = listOf(
@@ -26,6 +28,8 @@ sealed class JComponents(val componentName: String) {
             JComponents.OneLineRtlLtrListItems,
             JComponents.TwoLineRtlLtrListItems,
             JComponents.ThreeLineRtlLtrListItems,
+            JComponents.AlertDialogSample,
+            JComponents.CustomAlertDialogSample,
         )
     }
 }

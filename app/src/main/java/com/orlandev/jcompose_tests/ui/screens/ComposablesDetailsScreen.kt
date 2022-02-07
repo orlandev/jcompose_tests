@@ -77,6 +77,13 @@ fun ShowComponent(componentId: JComponents) {
         JComponents.TwoLineRtlLtrListItems -> {
             TwoLineRtlLtrListItems()
         }
+        JComponents.AlertDialogSample -> {
+            AlertDialogSample()
+
+        }
+        JComponents.CustomAlertDialogSample -> {
+            CustomAlertDialogSample()
+        }
     }
 
 }
